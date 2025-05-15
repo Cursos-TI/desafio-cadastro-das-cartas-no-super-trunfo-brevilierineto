@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 int main() {
-
-char estado1;
-    char codigo1[4]; 
+    char estado1[3]; 
+    char codigo1[4];
     char nomeCidade1[50];
     int populacao1;
     float area1;
     float pib1;
     int pontosTuristicos1;
 
-    char estado2;
+    char estado2[3];
     char codigo2[4];
     char nomeCidade2[50];
     int populacao2;
@@ -18,17 +17,16 @@ char estado1;
     float pib2;
     int pontosTuristicos2;
 
-
     printf("Cadastro da Carta 1:\n");
 
-    printf("Digite o Estado (A-H): ");
-    scanf(" %c", &estado1); 
+    printf("Digite o Estado (sigla ex: SP, RJ): ");
+    scanf("%2s", estado1);
 
     printf("Digite o Código da Carta (ex: A01): ");
-    scanf("%s", codigo1);
+    scanf("%3s", codigo1);
 
     printf("Digite o Nome da Cidade: ");
-    scanf(" %[^\n]", nomeCidade1); 
+    scanf(" %[^\n]", nomeCidade1);
 
     printf("Digite a População: ");
     scanf("%d", &populacao1);
@@ -44,11 +42,11 @@ char estado1;
 
     printf("\nCadastro da Carta 2:\n");
 
-    printf("Digite o Estado (A-H): ");
-    scanf(" %c", &estado2);
+    printf("Digite o Estado (sigla ex: SP, RJ): ");
+    scanf("%2s", estado2);
 
     printf("Digite o Código da Carta (ex: B02): ");
-    scanf("%s", codigo2);
+    scanf("%3s", codigo2);
 
     printf("Digite o Nome da Cidade: ");
     scanf(" %[^\n]", nomeCidade2);
@@ -65,8 +63,10 @@ char estado1;
     printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos2);
 
+    printf("\n===== DADOS DAS CARTAS =====\n");
+
     printf("\nCarta 1:\n");
-    printf("Estado: %c\n", estado1);
+    printf("Estado: %s\n", estado1);
     printf("Código: %s\n", codigo1);
     printf("Cidade: %s\n", nomeCidade1);
     printf("População: %d\n", populacao1);
@@ -75,7 +75,7 @@ char estado1;
     printf("Pontos Turísticos: %d\n", pontosTuristicos1);
 
     printf("\nCarta 2:\n");
-    printf("Estado: %c\n", estado2);
+    printf("Estado: %s\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Cidade: %s\n", nomeCidade2);
     printf("População: %d\n", populacao2);
@@ -84,6 +84,4 @@ char estado1;
     printf("Pontos Turísticos: %d\n", pontosTuristicos2);
 
     return 0;
-
-
 }
